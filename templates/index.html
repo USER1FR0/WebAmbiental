@@ -1,0 +1,98 @@
+{% extends "layout.html" %} 
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-6">
+      <div class="hero-content">
+        <h1><i class="fas fa-leaf"></i> Conciencia Ambiental</h1>
+        <p class="lead">Cuidar nuestro planeta es responsabilidad de todos. Juntos podemos crear un futuro más sostenible para las próximas generaciones.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <i class="fas fa-tree"></i>
+            <h3>Reforestación</h3>
+            <p>Millones de árboles plantados anualmente</p>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-recycle"></i>
+            <h3>Reciclaje</h3>
+            <p>Reducción de residuos contaminantes</p>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-water"></i>
+            <h3>Agua limpia</h3>
+            <p>Preservación de recursos hídricos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="hero-image">
+        <img
+          src="{{ url_for('static', filename='images/ambiente.jpg') }}"
+          alt="Medio Ambiente"
+          class="img-fluid rounded-4 shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Importancia -->
+<div class="importance-section">
+  <h2 class="section-title text-center mb-5">
+    <i class="fas fa-globe-americas"></i> ¿Por qué es importante?
+  </h2>
+  
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="info-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-lungs"></i>
+        </div>
+        <h4>Aire puro</h4>
+        <p>La reducción de emisiones contamina mejora la calidad del aire que respiramos y previene enfermedades respiratorias.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="info-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h4>Salud integral</h4>
+        <p>Un ambiente saludable contribuye directamente a nuestro bienestar físico y mental, mejorando la calidad de vida.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="info-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <h4>Biodiversidad</h4>
+        <p>Proteger ecosistemas preserva miles de especies y mantiene el equilibrio natural del planeta.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="cta-section text-center">
+  <h3><i class="fas fa-hands-helping"></i> Actúa ahora</h3>
+  <p>Pequeñas acciones pueden generar grandes cambios. Comienza hoy tu camino hacia un estilo de vida más sostenible.</p>
+  <div class="cta-buttons">
+    <a href="/tres-r" class="btn-custom">
+      <i class="fas fa-recycle"></i> Conoce las 3R
+    </a>
+    <a href="/sistema-ambiental" class="btn-custom btn-outline">
+      <i class="fas fa-cogs"></i> Sistema de Gestión
+    </a>
+  </div>
+</div>
+<div class="spacer" style="height: 40px;"></div>
+
+{% endblock %}

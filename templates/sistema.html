@@ -1,0 +1,147 @@
+{% extends "layout.html" %} 
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/sistema.css') }}" />
+
+<div class="sistema-container">
+  <div class="header-section text-center">
+    <h1><i class="fas fa-cogs"></i> Sistema de Gestión Ambiental</h1>
+    <p class="lead">Organización y procesos para gestionar el impacto ambiental de manera efectiva</p>
+  </div>
+
+  <!-- Ciclo PDCA -->
+  <div class="pdca-section">
+    <h2 class="text-center mb-4"><i class="fas fa-sync-alt"></i> Ciclo de Mejora Continua</h2>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="pdca-card pdca-plan">
+          <div class="pdca-number">1</div>
+          <i class="fas fa-clipboard-list"></i>
+          <h3>Planificar</h3>
+          <p>Identificar aspectos ambientales, establecer objetivos y definir procesos necesarios.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="pdca-card pdca-do">
+          <div class="pdca-number">2</div>
+          <i class="fas fa-tasks"></i>
+          <h3>Hacer</h3>
+          <p>Implementar los procesos planificados y ejecutar las acciones definidas.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="pdca-card pdca-check">
+          <div class="pdca-number">3</div>
+          <i class="fas fa-chart-line"></i>
+          <h3>Verificar</h3>
+          <p>Monitorear y medir los procesos contra objetivos y requisitos ambientales.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="pdca-card pdca-act">
+          <div class="pdca-number">4</div>
+          <i class="fas fa-redo-alt"></i>
+          <h3>Actuar</h3>
+          <p>Implementar acciones correctivas para mejorar continuamente el sistema.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Componentes Clave -->
+  <div class="components-section">
+    <h2 class="text-center mb-5"><i class="fas fa-puzzle-piece"></i> Componentes Clave</h2>
+    
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-file-alt"></i>
+          <div>
+            <h4>Política Ambiental</h4>
+            <p>Declaración de intenciones y compromisos ambientales de la organización.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-crosshairs"></i>
+          <div>
+            <h4>Objetivos y Metas</h4>
+            <p>Resultados ambientales específicos y medibles que se desean alcanzar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-book"></i>
+          <div>
+            <h4>Procedimientos</h4>
+            <p>Documentación de procesos y métodos para gestionar aspectos ambientales.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-user-graduate"></i>
+          <div>
+            <h4>Capacitación</h4>
+            <p>Formación del personal en responsabilidades y competencias ambientales.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-search"></i>
+          <div>
+            <h4>Monitoreo</h4>
+            <p>Seguimiento sistemático del desempeño ambiental y cumplimiento legal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="component-item">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <h4>Auditorías</h4>
+            <p>Evaluaciones periódicas para verificar la efectividad del sistema.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Beneficios -->
+  <div class="benefits-section">
+    <h2 class="text-center mb-4"><i class="fas fa-award"></i> Beneficios</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <i class="fas fa-coins"></i>
+        <span>Reducción de costos operativos</span>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-balance-scale"></i>
+        <span>Cumplimiento legal garantizado</span>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-thumbs-up"></i>
+        <span>Mejora de imagen corporativa</span>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-chart-bar"></i>
+        <span>Optimización de procesos</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="spacer" style="height: 40px;"></div>
+
+{% endblock %}

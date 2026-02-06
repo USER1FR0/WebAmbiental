@@ -1,0 +1,212 @@
+{% extends "layout.html" %} {% block content %}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='styles/tres_r.css') }}"
+/>
+
+<div class="tres-r-container">
+  <!-- Inputs ocultos ANTES de las columnas -->
+  <input
+    type="radio"
+    name="r-selector"
+    id="reducir-check"
+    class="r-radio"
+    checked
+  />
+  <input type="radio" name="r-selector" id="reutilizar-check" class="r-radio" />
+  <input type="radio" name="r-selector" id="reciclar-check" class="r-radio" />
+  <input type="radio" name="r-selector" id="none-check" class="r-radio" />
+
+  <!-- Layout en 2 columnas -->
+  <div class="row gx-0">
+    <!-- Columna izquierda: Icono y botones (40%) - Pegada a la izquierda -->
+    <div class="col-md-5 col-lg-4 sidebar-left">
+      <h2 class="text-center mb-4">Las 3R del Reciclaje</h2>
+
+      <div class="recycle-icon mb-4 text-center">
+        <i class="fas fa-recycle"></i>
+      </div>
+
+      <div class="r-buttons">
+        <label for="reducir-check" class="r-btn">
+          <i class="fas fa-minus-circle"></i> Reducir
+        </label>
+        <label for="reutilizar-check" class="r-btn">
+          <i class="fas fa-sync-alt"></i> Reutilizar
+        </label>
+        <label for="reciclar-check" class="r-btn">
+          <i class="fas fa-recycle"></i> Reciclar
+        </label>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Información (60%) -->
+    <div class="col-md-7 col-lg-8">
+      <div class="info-container">
+        <!-- Info REDUCIR -->
+        <div class="info-panel info-reducir">
+          <div class="panel-header">
+            <h3><i class="fas fa-minus-circle"></i> Reducir</h3>
+            <label for="none-check" class="close-btn"
+              ><i class="fas fa-times"></i
+            ></label>
+          </div>
+          <p class="panel-desc">
+            Disminuir el consumo y la generación de residuos
+          </p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <i class="fas fa-shopping-bag"></i>
+              <div>
+                <strong>Consume conscientemente</strong>
+                <p>
+                  Compra solo lo necesario y evita productos con exceso de
+                  empaque.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-lightbulb"></i>
+              <div>
+                <strong>Ahorra energía</strong>
+                <p>
+                  Apaga luces innecesarias y usa electrodomésticos eficientes.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-tint"></i>
+              <div>
+                <strong>Cuida el agua</strong>
+                <p>
+                  Cierra el grifo cuando no lo uses y repara fugas a tiempo.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-leaf"></i>
+              <div>
+                <strong>Impacto ambiental</strong>
+                <p>Previene la generación de residuos desde su origen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info REUTILIZAR -->
+        <div class="info-panel info-reutilizar">
+          <div class="panel-header">
+            <h3><i class="fas fa-sync-alt"></i> Reutilizar</h3>
+            <label for="none-check" class="close-btn"
+              ><i class="fas fa-times"></i
+            ></label>
+          </div>
+          <p class="panel-desc">
+            Dar una segunda vida a los objetos y materiales
+          </p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <i class="fas fa-tshirt"></i>
+              <div>
+                <strong>Dona y comparte</strong>
+                <p>Lo que ya no usas puede ser valioso para otras personas.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-palette"></i>
+              <div>
+                <strong>Creatividad</strong>
+                <p>
+                  Transforma objetos viejos en algo nuevo, útil y decorativo.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-shopping-basket"></i>
+              <div>
+                <strong>Bolsas reutilizables</strong>
+                <p>
+                  Evita las bolsas de plástico de un solo uso en tus compras.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-globe-americas"></i>
+              <div>
+                <strong>Impacto ambiental</strong>
+                <p>
+                  Extiende la vida útil de productos y reduce la demanda de
+                  nuevos recursos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info RECICLAR -->
+        <div class="info-panel info-reciclar">
+          <div class="panel-header">
+            <h3><i class="fas fa-recycle"></i> Reciclar</h3>
+            <label for="none-check" class="close-btn"
+              ><i class="fas fa-times"></i
+            ></label>
+          </div>
+          <p class="panel-desc">Transformar residuos en nuevos recursos</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <i class="fas fa-sort-amount-up"></i>
+              <div>
+                <strong>Separación correcta</strong>
+                <p>
+                  Clasifica papel, plástico, vidrio y residuos orgánicos
+                  adecuadamente.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-hand-sparkles"></i>
+              <div>
+                <strong>Limpia los envases</strong>
+                <p>
+                  Lava los recipientes antes de depositarlos en el contenedor.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-tags"></i>
+              <div>
+                <strong>Conoce los símbolos</strong>
+                <p>Aprende qué materiales son reciclables y cuáles no.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-industry"></i>
+              <div>
+                <strong>Impacto ambiental</strong>
+                <p>
+                  Conserva recursos naturales y reduce la contaminación
+                  industrial.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

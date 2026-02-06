@@ -1,0 +1,85 @@
+      #menu-check {
+          display: none;
+      }
+
+      #navbar-list {
+          display: flex !important;
+          flex-direction: row;
+          justify-content: flex-end;
+          /* Se despliega hacia la izquierda */
+          gap: 30px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          /* ESTADO INICIAL: Oculto y sin ancho */
+          max-width: 0;
+          opacity: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          /* Evita que el texto salte de línea al abrirse */
+          transition: max-width 0.6s ease-in-out, opacity 0.4s ease;
+      }
+
+      /* ESTADO ACTIVO: Cuando se marca el checkbox */
+      #menu-check:checked~#navbar-list {
+          max-width: 1000px;
+          /* Un valor lo suficientemente grande */
+          opacity: 1;
+      }
+
+      /* Estilo del botón y links */
+      .menu-btn {
+          cursor: pointer;
+          font-size: 22px;
+          z-index: 10;
+      }
+
+      .nav-link {
+          text-decoration: none;
+          color: black;
+          font-size: 0.9rem;
+      }
+
+      .header-content {
+          background-color: #ecffec;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 9999;
+      }
+
+      .header-title {
+          font-size: 1.5rem;
+          color: #2e7d32;
+          cursor: default;
+      }
+
+      .footer-content {
+          background-color: #ecffec;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          z-index: 9999;
+      }
+
+      .nav-container {
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+          gap: 15px;
+      }
+
+      .main-container {
+          min-height: 69vh;
+          max-height: 69vh;
+      }
+
+      .container-2 {
+          margin-top: 50px;
+          font-style: oblique;
+          font-size: 1.1em;
+      }
